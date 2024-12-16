@@ -2,12 +2,12 @@
 "use client";
 
 import React from "react";
-import Sidebar from "@/components/layout/sidebar";
+import Navbar from "@/components/layout/navbar";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="relative min-h-screen bg-gray-950">
-      <Sidebar />
+      <Navbar />
       <main className="flex-1 px-4 overflow-y-auto">{children}</main>
     </div>
   );

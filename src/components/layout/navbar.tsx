@@ -1,4 +1,3 @@
-// src/components/layout/Sidebar.tsx
 "use client";
 
 import Link from "next/link";
@@ -22,7 +21,7 @@ const navItems = [
   { icon: Settings, label: "Settings", href: "/settings" },
 ];
 
-const Sidebar = () => {
+const Navbar = () => {
   const pathname = usePathname();
 
   return (
@@ -61,4 +60,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Navbar;
