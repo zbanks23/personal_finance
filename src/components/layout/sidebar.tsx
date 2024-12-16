@@ -43,7 +43,7 @@ const Sidebar = () => {
                   <item.icon size={20} />
                   <span
                     className={cn(
-                      "ml-2 absolute left-full top-1/2 transform -translate-y-20 bg-gray-800 text-white px-2 py-1 rounded opacity-0 transition-opacity duration-200 whitespace-nowrap",
+                      "ml-2 absolute left-full top-1/2 transform -translate-y-20 bg-gray-800 text-indigo-500 px-2 py-1 rounded opacity-0 transition-opacity duration-200 whitespace-nowrap",
                       pathname === item.href
                         ? "opacity-100 static transform-none ml-2"
                         : "group-hover:opacity-100"
