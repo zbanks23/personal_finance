@@ -2,7 +2,7 @@ import React from "react";
 
 const transactions = () => {
   return (
-    <div className="max-w-6xl">
+    <div className="w-3/4">
       <h1 className="text-indigo-600 text-2xl font-bold mb-4">
         Transactions History
       </h1>

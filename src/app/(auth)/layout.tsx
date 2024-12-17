@@ -2,7 +2,6 @@
 "use client";
 
 import React from "react";
-import Sidebar from "@/components/layout/navbar";
 
 const authLayout = ({ children }: { children: React.ReactNode }) => {
   return (
