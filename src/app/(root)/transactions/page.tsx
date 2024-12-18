@@ -10,6 +10,7 @@ export default async function transactions() {
         Transactions History
       </h1>
       {client && <p className="text-green-500">Connected to database</p>}
+      <form method="post"></form>
     </div>
   );
 }
