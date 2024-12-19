@@ -1,16 +1,30 @@
-import React from "react";
+import { transactions } from "@/lib/placeholder-data";
+import TransactionList from "@/components/ui/transactionList";
 import { connectToDB } from "@/lib/data";
 
-export default async function transactions() {
-  const client = await connectToDB();
+export default async function TransactionsPage() {
+  const client = await connectToDB(); // The error in the terminal came from this, but its not too bad. Will fix later on.
 
   return (
-    <div className="w-3/4">
-      <h1 className="text-indigo-600 text-2xl font-bold mb-4">
+    <div>
+      {client && <p className="text-green-500">Connected to database</p>}
+      <h1 className="flex justify-center text-indigo-600 text-2xl font-bold mb-4">
         Transactions History
       </h1>
-      {client && <p className="text-green-500">Connected to database</p>}
-      <form method="post"></form>
+      <div className="w-3/4">
+        <table className="text-white w-full">
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Amounts</th>
+          </tr>
+          {transactions.map((transaction) => (
+            <TransactionList key={transaction.id} {...transaction} />
+          ))}
+        </table>
+      </div>
+      <div className="w-fit"></div>
     </div>
   );
 }

@@ -70,3 +70,8 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+td {
+  text-align: center;
+  padding: 2px;
+}

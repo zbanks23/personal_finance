@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import {
   Home,
-  WalletMinimal,
   ScrollText,
   PieChart,
   ChartNoAxesCombined,
@@ -13,11 +12,10 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { icon: WalletMinimal, label: "Income", href: "/income" },
+  { icon: ChartNoAxesCombined, label: "Investments", href: "/investments" },
   { icon: ScrollText, label: "Transactions", href: "/transactions" },
   { icon: Home, label: "Dashboard", href: "/dashboard" },
   { icon: PieChart, label: "Budget", href: "/budget" },
-  { icon: ChartNoAxesCombined, label: "Investments", href: "/investments" },
   { icon: Settings, label: "Settings", href: "/settings" },
 ];
 
