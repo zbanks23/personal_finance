@@ -12,10 +12,10 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { icon: ChartNoAxesCombined, label: "Investments", href: "/investments" },
-  { icon: ScrollText, label: "Transactions", href: "/transactions" },
   { icon: Home, label: "Dashboard", href: "/dashboard" },
+  { icon: ScrollText, label: "Transactions", href: "/transactions" },
   { icon: PieChart, label: "Budget", href: "/budget" },
+  { icon: ChartNoAxesCombined, label: "Investments", href: "/investments" },
   { icon: Settings, label: "Settings", href: "/settings" },
 ];
 
