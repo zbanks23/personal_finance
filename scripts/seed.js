@@ -11,7 +11,6 @@ async function seedTransactions(client) {
           date DATE NOT NULL,
           description TEXT NOT NULL,
           category TEXT NOT NULL,
-          type TEXT NOT NULL,
           amount NUMERIC NOT NULL
         );
       `;
@@ -22,8 +21,8 @@ async function seedTransactions(client) {
       const insertedTransactions = await Promise.all(
         transactions.map(async (transaction) => {
           return client.sql`
-          INSERT INTO transactions (date, description, category, type, amount)
-          VALUES (${transaction.date}, ${transaction.description}, ${transaction.category}, ${transaction.type}, ${transaction.amount})
+          INSERT INTO transactions (date, description, category, amount)
+          VALUES (${transaction.date}, ${transaction.description}, ${transaction.category}, ${transaction.amount})
           ON CONFLICT (id) DO NOTHING;
         `;
         })
